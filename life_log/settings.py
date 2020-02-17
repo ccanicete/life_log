@@ -25,7 +25,7 @@ SECRET_KEY = 'dvc@r&jz4+w_(n=33@h!o$)+7nwi0j+#!%ee1a^wvx(9_!irg7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -61,7 +61,9 @@ ROOT_URLCONF = 'life_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'life_log/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
